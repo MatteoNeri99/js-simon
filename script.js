@@ -8,7 +8,7 @@ const numeriRandom=[];
 
 function numeroRandomicoEl (elemento,container, array){
 
-    while (array.length <5){
+    while (array.length < 5){
 
         let numeroRandom=Math.floor(Math.random() * 10);
 
@@ -28,4 +28,12 @@ function numeroRandomicoEl (elemento,container, array){
 
 numeroRandomicoEl(pEl,divContainer,numeriRandom)
 
-console.log(numeriRandom)
+setTimeout (function (){
+
+    divContainer.innerHTML="";
+
+
+},30000)
+
+
+
