@@ -1,10 +1,14 @@
 const divContainer=document.querySelector("div.container");
 
-console.log(divContainer);
+
 
 let pEl;
 
 const numeriRandom=[];
+
+const arrayNumeriUtente=[];
+
+const numeriIndovinati=[];
 
 function numeroRandomicoEl (elemento,container, array){
 
@@ -33,24 +37,52 @@ setTimeout (function (){
     divContainer.innerHTML="";
 
 
-},30000)
-
-const arrayNumeriUtente=[];
+}, 30000)
 
 
 
-while (arrayNumeriUtente.length < 5 ) {
 
-    let numeroUtente=Number.parseInt(prompt("inserisci un numero che ricordi"),10);
 
-    arrayNumeriUtente.push(numeroUtente);
+setTimeout(function(){
+    9
 
-    if (arrayNumeriUtente.includes(NaN)){
+    while (arrayNumeriUtente.length < 5 ) {
 
-        arrayNumeriUtente.pop(numeroUtente);
-    }
+        let numeroUtente=Number.parseInt(prompt("inserisci un numero che ricordi"),10);
     
-}
+        arrayNumeriUtente.push(numeroUtente);
+    
+        if (arrayNumeriUtente.includes(NaN)){
+    
+            arrayNumeriUtente.pop(numeroUtente);
+        }
+        
+    }
 
-console.log(arrayNumeriUtente)
+    for (let i=0; i<numeriRandom.length; i++){
+
+        for (let index=0; index<arrayNumeriUtente.length; index++){
+    
+            if (numeriRandom[i] === arrayNumeriUtente[index]){
+        
+                numeriIndovinati.push(numeriRandom[i]);
+        
+            }
+        }
+    }
+
+    console.log("hai indovinato: " + numeriIndovinati.length)
+
+    console.log("i numeri che hai indovinato sono: " + numeriIndovinati)
+    
+    
+
+}, 31000)
+
+
+
+
+
+
+
 
