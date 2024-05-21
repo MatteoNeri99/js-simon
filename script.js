@@ -35,5 +35,22 @@ setTimeout (function (){
 
 },30000)
 
+const arrayNumeriUtente=[];
 
+
+
+while (arrayNumeriUtente.length < 5 ) {
+
+    let numeroUtente=Number.parseInt(prompt("inserisci un numero che ricordi"),10);
+
+    arrayNumeriUtente.push(numeroUtente);
+
+    if (arrayNumeriUtente.includes(NaN)){
+
+        arrayNumeriUtente.pop(numeroUtente);
+    }
+    
+}
+
+console.log(arrayNumeriUtente)
 
